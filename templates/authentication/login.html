@@ -1,0 +1,36 @@
+{% extends 'base_auth.html' %}
+
+{% load static %}
+
+{% block content %}
+  <div class="row">
+    <div class="col-md-4"></div>
+
+    <div class="col-md-4">
+      <div class="card mt-5">
+
+        <div class="card-title py-4 text-uppercase text-center">
+          <h2>Login User</h2>
+        </div>
+        
+        <div class="card-body">
+
+          <form action="" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+              <input type="text" name="username" class="form-control form-control-sm" placeholder="Username" id="usernameField" />
+            </div>
+
+            <div class="form-group">
+              <input type="password" name="email" class="form-control form-control-sm" placeholder="Email" id="passwordField" />
+            </div>
+            <small class="float-right text-uppercase"></small>
+            <input type="submit" value="Login" class="btn btn-success"/>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3"></div>
+  </div>
+{% endblock %}
